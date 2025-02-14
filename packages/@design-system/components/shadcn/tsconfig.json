@@ -1,0 +1,10 @@
+{
+  "extends": "@configs/typescript/react.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types"],
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "@configs/typescript/react.json",
+  "include": ["src", "types/react.d.ts", "types/vite-env.d.ts", "tests"],
+  "references": [{ "path": "./tsconfig.vite.json" }],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  }
+}

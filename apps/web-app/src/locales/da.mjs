@@ -1,0 +1,1 @@
+/*eslint-disable*/export const messages=JSON.parse("{\"BGT3hp\":[\"Velkommen til min app\"]}");

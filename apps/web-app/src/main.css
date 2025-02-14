@@ -1,0 +1,17 @@
+@import "@design-system/shadcn/styles.css";
+@import "@theme-toggles/react/css/Around.css";
+
+@layer base {
+  body {
+    background-color: hsl(var(--colors-background));
+    color: hsl(var(--colors-foreground));
+  }
+  
+  #root {
+    @apply grid h-dvh grid-cols-1 grid-rows-[auto_1fr_auto];
+    @apply bg-inherit;
+  }
+}
+
+
+

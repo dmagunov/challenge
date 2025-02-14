@@ -1,0 +1,10 @@
+{
+  "borderRadius-base-none": {
+    "$type": "dimension",
+    "$value": "0"
+  },
+  "borderRadius-base-full": {
+    "$type": "dimension",
+    "$value": "9999px"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "@design-system/docs",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "npx storybook dev -p 6006",
+    "build": "npx storybook build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "@storybook/theming": "^8.4.7",
+    "lucide-react": "^0.437.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tilg": "^0.1.1"
+  },
+  "devDependencies": {
+    "@configs/eslint": "workspace:*",
+    "@configs/prettier": "workspace:*",
+    "@configs/typescript": "workspace:*",
+    "@design-system/design-tokens": "workspace:*",
+    "@design-system/shadcn": "workspace:*",
+    "@storybook/addon-a11y": "^8.4.7",
+    "@storybook/addon-essentials": "8.4.7",
+    "@storybook/addon-interactions": "8.4.7",
+    "@storybook/addon-links": "8.4.7",
+    "@storybook/blocks": "8.4.7",
+    "@storybook/react": "8.4.7",
+    "@storybook/react-vite": "8.4.7",
+    "@storybook/test": "8.4.7",
+    "@types/node": "^22.5.4",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.15.0",
+    "postcss": "^8.4.45",
+    "postcss-import": "^16.0.0",
+    "prettier": "^3.3.3",
+    "storybook": "8.4.7",
+    "storybook-dark-mode": "^4.0.2",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.2",
+    "vite": "^6.0.3"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "colors-base-black": {
+    "$type": "color",
+    "$value": "#000000"
+  },
+  "colors-base-white": {
+    "$type": "color",
+    "$value": "#FFFFFF"
+  }
+}

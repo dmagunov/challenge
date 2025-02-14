@@ -1,0 +1,37 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env"],
+  "globalEnv": ["CI", "NODE_ENV"],
+  "tasks": {
+    "web-app#dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": [
+        "^@design-system/design-tokens#build",
+        "^web-app#lingui:compile"
+      ]
+    },
+    "web-app#lingui:extract": {
+      "cache": false,
+      "outputs": ["src/locales/**"]
+    },
+    "web-app#lingui:compile": {
+      "cache": false,
+      "outputs": ["src/locales/**"],
+      "dependsOn": ["^web-app#lingui:extract"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "build/**", ".next/**", "!.next/cache/**"]
+    },
+    "lint": {},
+    "type-check": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}

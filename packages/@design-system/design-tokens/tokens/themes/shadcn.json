@@ -1,0 +1,215 @@
+{
+  "colors-background": {
+    "$type": "color",
+    "$value": "#fff",
+    "$extensions": {
+      "mode": { "dark": "#0c0a09" }
+    }
+  },
+  "colors-foreground": {
+    "$type": "color",
+    "$value": "{colors-base-black}",
+    "$extensions": {
+      "mode": { "dark": "#fafaf9" }
+    }
+  },
+  "colors-card": {
+    "$type": "color",
+    "$value": "#CCE6F2",
+    "$extensions": {
+      "mode": { "dark": "#0c0a09" }
+    }
+  },
+  "colors-card-foreground": {
+    "$type": "color",
+    "$value": "#1A1A1A",
+    "$extensions": {
+      "mode": { "dark": "#fafaf9" }
+    }
+  },
+  "colors-popover": {
+    "$type": "color",
+    "$value": "#E8F8FF",
+    "$extensions": {
+      "mode": { "dark": "#0c0a09" }
+    }
+  },
+  "colors-popover-foreground": {
+    "$type": "color",
+    "$value": "{colors-foreground}",
+    "$extensions": {
+      "mode": { "dark": "#fafaf9" }
+    }
+  },
+  "colors-primary": {
+    "$type": "color",
+    "$value": "#0D99FF",
+    "$extensions": {
+      "mode": { "dark": "#fdb814" }
+    }
+  },
+  "colors-primary-foreground": {
+    "$type": "color",
+    "$value": "#FFFFFF",
+    "$extensions": {
+      "mode": { "dark": "#3a1f0a" }
+    }
+  },
+  "colors-secondary": {
+    "$type": "color",
+    "$value": "#B3D9E6",
+    "$extensions": {
+      "mode": { "dark": "#282524" }
+    }
+  },
+  "colors-secondary-foreground": {
+    "$type": "color",
+    "$value": "{colors-foreground}",
+    "$extensions": {
+      "mode": { "dark": "#fafaf9" }
+    }
+  },
+  "colors-muted": {
+    "$type": "color",
+    "$value": "#D9E6D9",
+    "$extensions": {
+      "mode": { "dark": "#282524" }
+    }
+  },
+  "colors-muted-foreground": {
+    "$type": "color",
+    "$value": "#595959",
+    "$extensions": {
+      "mode": { "dark": "#a4a3a2" }
+    }
+  },
+  "colors-accent": {
+    "$type": "color",
+    "$value": "#CCE6CC",
+    "$extensions": {
+      "mode": { "dark": "#282524" }
+    }
+  },
+  "colors-accent-foreground": {
+    "$type": "color",
+    "$value": "#1A1A1A",
+    "$extensions": {
+      "mode": { "dark": "#fafaf9" }
+    }
+  },
+  "colors-destructive": {
+    "$type": "color",
+    "$value": "#990000",
+    "$extensions": {
+      "mode": { "dark": "#7f1d1d" }
+    }
+  },
+  "colors-destructive-foreground": {
+    "$type": "color",
+    "$value": "#E6E6E6",
+    "$extensions": {
+      "mode": { "dark": "#fafaf9" }
+    }
+  },
+  "colors-border": {
+    "$type": "color",
+    "$value": "#4D99BF",
+    "$extensions": {
+      "mode": { "dark": "#282524" }
+    }
+  },
+  "colors-input": {
+    "$type": "color",
+    "$value": "#2E3D47",
+    "$extensions": {
+      "mode": { "dark": "#282524" }
+    }
+  },
+  "colors-ring": {
+    "$type": "color",
+    "$value": "#0D99FF",
+    "$extensions": {
+      "mode": { "dark": "#854d0e" }
+    }
+  },
+  "colors-sidebar-background": {
+    "$type": "color",
+    "$value": "#fafafa",
+    "$extensions": {
+      "mode": { "dark": "#191919" }
+    }
+  },
+  "colors-sidebar-foreground": {
+    "$type": "color",
+    "$value": "#404042",
+    "$extensions": {
+      "mode": { "dark": "#f4f4f5" }
+    }
+  },
+  "colors-sidebar-primary": {
+    "$type": "color",
+    "$value": "#191919",
+    "$extensions": {
+      "mode": { "dark": "#1d4ed8" }
+    }
+  },
+  "colors-sidebar-primary-foreground": {
+    "$type": "color",
+    "$value": "#fafafa",
+    "$extensions": {
+      "mode": { "dark": "#ffffff" }
+    }
+  },
+  "colors-sidebar-accent": {
+    "$type": "color",
+    "$value": "#f4f4f5",
+    "$extensions": {
+      "mode": { "dark": "#27272a" }
+    }
+  },
+  "colors-sidebar-accent-foreground": {
+    "$type": "color",
+    "$value": "#191919",
+    "$extensions": {
+      "mode": { "dark": "#f4f4f5" }
+    }
+  },
+  "colors-sidebar-border": {
+    "$type": "color",
+    "$value": "#e5e7eb",
+    "$extensions": {
+      "mode": { "dark": "#27272a" }
+    }
+  },
+  "colors-sidebar-ring": {
+    "$type": "color",
+    "$value": "#3b82f6",
+    "$extensions": {
+      "mode": { "dark": "#3b82f6" }
+    }
+  },
+  "borderRadius": {
+    "$type": "dimension",
+    "$value": "2rem"
+  },
+  "borderRadius-xs": {
+    "$type": "dimension",
+    "$value": "calc(2rem - 1.8rem)"
+  },
+  "borderRadius-sm": {
+    "$type": "dimension",
+    "$value": "calc(2rem - 1.5rem)"
+  },
+  "borderRadius-md": {
+    "$type": "dimension",
+    "$value": "calc(2rem - 1rem)"
+  },
+  "borderRadius-lg": {
+    "$type": "dimension",
+    "$value": "calc(2rem + 1rem)"
+  },
+  "borderRadius-xl": {
+    "$type": "dimension",
+    "$value": "calc(2rem + 1.5rem)"
+  }
+}

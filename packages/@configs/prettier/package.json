@@ -1,0 +1,9 @@
+{
+  "name": "@configs/prettier",
+  "version": "0.0.0",
+  "private": true,
+  "main": "prettier.mjs",
+  "peerDependencies": {
+    "prettier": "^3.3.3"
+  }
+}

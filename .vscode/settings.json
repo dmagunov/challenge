@@ -1,0 +1,19 @@
+{
+  "eslint.useFlatConfig": true,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "tailwindCSS.experimental.configFile": {
+    "apps/web-app/tailwind.config.ts": "apps/web-app/src/**/*.tsx",
+    "packages/@design-system/components/shadcn/tailwind.config.ts": "packages/@design-system/components/shadcn/**/*.tsx"
+  },
+
+  "files.exclude": {
+    "**/.next": true,
+    "**/.turbo": true,
+    "**/.vercel": true
+  }
+}

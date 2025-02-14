@@ -1,0 +1,24 @@
+{
+  "name": "@design-system/core",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    "./utils": "./src/utils.ts"
+  },
+  "scripts": {
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@configs/prettier": "workspace:*",
+    "@configs/typescript": "workspace:*",
+    "@types/node": "^22.5.4",
+    "tailwind-merge": "^2.5.4",
+    "typescript": "^5.6.2",
+    "class-variance-authority": "^0.7.1"
+  }
+}

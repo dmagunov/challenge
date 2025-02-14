@@ -1,1 +1,1 @@
-/*eslint-disable*/export const messages=JSON.parse("{\"BGT3hp\":[\"Welcome to My App\"]}");
+/*eslint-disable*/export const messages=JSON.parse("{\"LuXP9q\":[\"Access\"],\"jBtpMP\":[\"All statuses\"],\"I5YR4E\":[\"Charging Points\"],\"Cfi7YE\":[\"Connector Type\"],\"izLwfx\":[\"Max Power\"],\"zwBp5t\":[\"Private\"],\"7d1a0d\":[\"Public\"],\"sDN2Y/\":[\"Search locations...\"],\"GtJCHv\":[\"Select a status\"],\"uAQUqI\":[\"Status\"]}");

@@ -13,6 +13,42 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/index.tsx:68
-msgid "Welcome to My App"
-msgstr "Velkommen til min app"
+#: src/components/location-card/location-card.tsx:54
+msgid "Access"
+msgstr "Adgang"
+
+#: src/components/status-select/status-select.tsx:56
+msgid "All statuses"
+msgstr "Alle statusser"
+
+#: src/routes/index.tsx:30
+msgid "Charging Points"
+msgstr "Ladepunkter"
+
+#: src/components/location-card/location-card.tsx:48
+msgid "Connector Type"
+msgstr "Kontakt Type"
+
+#: src/components/location-card/location-card.tsx:39
+msgid "Max Power"
+msgstr "Maksimal Effekt"
+
+#: src/components/location-card/location-card.tsx:62
+msgid "Private"
+msgstr "Privat"
+
+#: src/components/location-card/location-card.tsx:62
+msgid "Public"
+msgstr "Offentlig"
+
+#: src/components/search-input/search-input.tsx:25
+msgid "Search locations..."
+msgstr "Søg efter ladepunkter..."
+
+#: src/components/status-select/status-select.tsx:25
+msgid "Select a status"
+msgstr "Vælg en status"
+
+#: src/components/location-card/location-card.tsx:33
+msgid "Status"
+msgstr "Status"

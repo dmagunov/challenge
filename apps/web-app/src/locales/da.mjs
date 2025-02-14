@@ -1,1 +1,1 @@
-/*eslint-disable*/export const messages=JSON.parse("{\"BGT3hp\":[\"Velkommen til min app\"]}");
+/*eslint-disable*/export const messages=JSON.parse("{\"LuXP9q\":[\"Adgang\"],\"jBtpMP\":[\"All statuses\"],\"I5YR4E\":[\"Ladepunkter\"],\"Cfi7YE\":[\"Kontakt Type\"],\"izLwfx\":[\"Maksimal Effekt\"],\"zwBp5t\":[\"Privat\"],\"7d1a0d\":[\"Offentlig\"],\"sDN2Y/\":[\"Søg efter ladepunkter...\"],\"GtJCHv\":[\"Vælg en status\"],\"uAQUqI\":[\"Status\"]}");

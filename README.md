@@ -45,4 +45,11 @@ pnpm i -r
 pnpm dev
 ```
 
-By default, web app will be available at `http://localhost:5173`, API at `http://localhost:3001` and design system docs at `http://localhost:6006`.
+By default, web app will be available at `http://localhost:5173`, API at `http://localhost:3001` (can be changed by renaming `.env.example` to `.env` for [api](apps/api/.env.example) and [web-app](apps/web-app/.env.example) and providing your own settings), and design system docs at `http://localhost:6006`,
+be sure to have all the ports available.
+
+## Build
+
+```
+pnpm build
+```

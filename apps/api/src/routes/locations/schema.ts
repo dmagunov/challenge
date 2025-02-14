@@ -1,8 +1,8 @@
 import { z } from "zod";
 
-const locationStatusEnum = ["Available", "In use", "Suspended"] as const;
-const locationTypeEnum = ["spirii", "hubject"] as const;
-const connectorTypeEnum = ["sType2"] as const;
+const locationStatus = ["Available", "In use", "Suspended"] as const;
+const locationType = ["spirii", "hubject"] as const;
+const connectorType = ["sType2"] as const;
 
 const addressSchema = z.object({
   name: z.string(),
@@ -21,15 +21,15 @@ const locationSchema = z.object({
   locationId: z.union([z.number(), z.string()]),
   address: addressSchema,
   coordinates: coordinatesSchema,
-  connectorType: z.enum(connectorTypeEnum),
-  status: z.enum(locationStatusEnum).optional(),
+  connectorType: z.enum(connectorType),
+  status: z.enum(locationStatus).optional(),
   maxPower: z.number(),
   public: z.boolean(),
-  type: z.enum(locationTypeEnum),
+  type: z.enum(locationType),
 });
 
 const locationsRequestSchema = z.object({
-  status: z.enum(locationStatusEnum).optional(),
+  status: z.enum(locationStatus).optional(),
   search: z.string().optional(),
 });
 

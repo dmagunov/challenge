@@ -1,6 +1,6 @@
 # Challenge Monorepo
 
-I've decided to use my monorepo starter template for this project since it offers many reusable features. These include an API web server, linter configurations, formatters, and sharable components with a design system, type safe API client, and more.
+I've decided to use my personalmonorepo starter template for this project since it offers many reusable features. These include an API web server, linter configurations, formatters, sharable components with a design system, type safe API client, and more.
 
 <details>
 <summary><h2>Applications workspace</h2></summary>
@@ -62,7 +62,7 @@ Be sure to have all the ports available.
 
 Of course I was not able to implement all the features and requirements, but I've tried to cover the most important ones.
 
-- List performance optimizations - pagination, infinite scroll, etc. On an API side rate limiting could be applied.
+- List performance optimizations - pagination, infinite scroll, etc. On an API side - rate limiting could be applied.
 - Offline capabilities - could be achieved by PWA plus persistent storage (indexedDB, [OPFS](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system), or alternatives that [Local-first software](https://localfirstweb.dev/) can provide for us). There are also persistent connectors for Tanstack Query.
 - Real-time capabilities - could be achieved by WebSocket
 - Ideally I should move filters to the query params and handle it using Router.

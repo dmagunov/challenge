@@ -1,8 +1,9 @@
 import { hc } from "hono/client";
 import { type ApiType } from "api";
 
-const api = hc<ApiType>(
+const client = hc<ApiType>(
+  // fallback in case .env is not available
   import.meta.env.VITE_API_URL ?? "http://localhost:3001"
 );
 
-export { api };
+export { client };

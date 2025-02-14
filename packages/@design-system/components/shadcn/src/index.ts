@@ -5,3 +5,4 @@ export * from "./ui/avatar";
 export * from "./ui/tooltip";
 export * from "./ui/input";
 export * from "./ui/select";
+export * from "./ui/card";

@@ -1,5 +1,4 @@
 import { Hono } from "hono";
-import sampleRoutes from "./sample";
+import locationsRoutes from "./locations";
 
-export default new Hono().route("/sample", sampleRoutes);
-
+export default new Hono().route("/locations", locationsRoutes);

@@ -18,7 +18,7 @@ app.get("/api", (c) => {
       version,
       ...config,
       endpoints: {
-        sample: "/api/sample",
+        locations: "/api/locations",
       },
     })),
   });
@@ -33,7 +33,6 @@ export default {
   fetch: app.fetch,
   port: env.API_PORT,
   hostname: env.API_HOST,
-  // TODO: move to env
   idleTimeout: 30,
 };
 

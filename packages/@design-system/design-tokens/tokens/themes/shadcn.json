@@ -190,26 +190,26 @@
   },
   "borderRadius": {
     "$type": "dimension",
-    "$value": "2rem"
+    "$value": "1rem"
   },
   "borderRadius-xs": {
     "$type": "dimension",
-    "$value": "calc(2rem - 1.8rem)"
+    "$value": "calc(1rem - 0.9rem)"
   },
   "borderRadius-sm": {
     "$type": "dimension",
-    "$value": "calc(2rem - 1.5rem)"
+    "$value": "calc(1rem - 0.75rem)"
   },
   "borderRadius-md": {
     "$type": "dimension",
-    "$value": "calc(2rem - 1rem)"
+    "$value": "calc(1rem - 0.5rem)"
   },
   "borderRadius-lg": {
     "$type": "dimension",
-    "$value": "calc(2rem + 1rem)"
+    "$value": "calc(1rem + 0.5rem)"
   },
   "borderRadius-xl": {
     "$type": "dimension",
-    "$value": "calc(2rem + 1.5rem)"
+    "$value": "calc(1rem + 0.75rem)"
   }
 }

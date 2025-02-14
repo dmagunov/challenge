@@ -51,8 +51,10 @@ function SearchResults({ search, status }: SearchResultsProps) {
         aria-label={t`List of charging points`}
       >
         {data.locations.map((location: Location) => (
-          <li key={location.locationId}>
-            <LocationCard location={location} />
+          <li key={location.locationId} className="h-full">
+            <article className="h-full" aria-roledescription="charging point">
+              <LocationCard location={location} />
+            </article>
           </li>
         ))}
       </ul>

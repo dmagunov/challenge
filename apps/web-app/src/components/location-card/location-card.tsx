@@ -15,53 +15,72 @@ import { LocationStatus as LocationStatusComponent } from "../location-status";
 
 const LocationCard = ({ location }: { location: Location }) => {
   return (
-    <Card key={location.locationId} className="flex flex-col">
+    <Card className="flex h-full flex-col">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Zap className="h-5 w-5 text-primary" />
-          {location.address.name}
+          <Zap className="h-5 w-5 text-primary" aria-hidden="true" />
+          <span>{location.address.name}</span>
         </CardTitle>
         <CardDescription className="flex items-center gap-2">
-          <MapPin className="h-4 w-4 text-muted-foreground" />
-          {location.address.street}, {location.address.zipCode}{" "}
-          {location.address.city}
+          <MapPin
+            className="h-4 w-4 text-muted-foreground"
+            aria-hidden="true"
+          />
+          <span>
+            {location.address.street}, {location.address.zipCode}{" "}
+            {location.address.city}
+          </span>
         </CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <div className="mb-2 flex items-center justify-between">
-          <span className="text-sm font-medium">
-            <Trans>Status</Trans>
-          </span>
-          <LocationStatusComponent status={location.status} />
-        </div>
-        <div className="mb-2 flex items-center justify-between">
-          <span className="text-sm font-medium">
-            <Trans>Max Power</Trans>
-          </span>
-          <Badge variant="secondary">
-            <Battery className="mr-1 h-4 w-4" />
-            {location.maxPower} kW
-          </Badge>
-        </div>
-        <div className="mb-2 flex items-center justify-between">
-          <span className="text-sm font-medium">
-            <Trans>Connector Type</Trans>
-          </span>
-          <span className="text-sm">{location.connectorType}</span>
-        </div>
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-medium">
-            <Trans>Access</Trans>
-          </span>
-          <Badge variant={location.public ? "default" : "outline"}>
-            {location.public ? (
-              <Globe className="mr-1 h-4 w-4" />
-            ) : (
-              <Lock className="mr-1 h-4 w-4" />
-            )}
-            {location.public ? <Trans>Public</Trans> : <Trans>Private</Trans>}
-          </Badge>
-        </div>
+        <dl className="space-y-2">
+          <div className="flex items-center justify-between">
+            <dt className="text-sm font-medium">
+              <Trans>Status</Trans>
+            </dt>
+            <dd>
+              <LocationStatusComponent status={location.status} />
+            </dd>
+          </div>
+          <div className="flex items-center justify-between">
+            <dt className="text-sm font-medium">
+              <Trans>Max Power</Trans>
+            </dt>
+            <dd>
+              <Badge variant="secondary">
+                <Battery className="mr-1 h-4 w-4" aria-hidden="true" />
+                <span>{location.maxPower} kW</span>
+              </Badge>
+            </dd>
+          </div>
+          <div className="flex items-center justify-between">
+            <dt className="text-sm font-medium">
+              <Trans>Connector Type</Trans>
+            </dt>
+            <dd className="text-sm">{location.connectorType}</dd>
+          </div>
+          <div className="flex items-center justify-between">
+            <dt className="text-sm font-medium">
+              <Trans>Access</Trans>
+            </dt>
+            <dd>
+              <Badge variant={location.public ? "default" : "outline"}>
+                {location.public ? (
+                  <Globe className="mr-1 h-4 w-4" aria-hidden="true" />
+                ) : (
+                  <Lock className="mr-1 h-4 w-4" aria-hidden="true" />
+                )}
+                <span>
+                  {location.public ? (
+                    <Trans>Public</Trans>
+                  ) : (
+                    <Trans>Private</Trans>
+                  )}
+                </span>
+              </Badge>
+            </dd>
+          </div>
+        </dl>
       </CardContent>
     </Card>
   );

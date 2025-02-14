@@ -10,7 +10,7 @@ function ThemeSwitcher() {
     <Around
       toggled={colorScheme === "dark"}
       toggle={() => setColorScheme(colorScheme === "dark" ? "light" : "dark")}
-      className="text-3xl"
+      className="text-2xl"
     />
   );
 }

@@ -11,19 +11,7 @@ import {
 import { Trans } from "@lingui/react/macro";
 
 import type { Location, LocationStatus } from "api/locations";
-
-const getStatusColor = (status: LocationStatus | undefined) => {
-  switch (status) {
-    case "Available":
-      return "bg-green-500";
-    case "In use":
-      return "bg-yellow-500";
-    case "Suspended":
-      return "bg-red-500";
-    default:
-      return "bg-gray-500";
-  }
-};
+import { LocationStatus as LocationStatusComponent } from "../location-status";
 
 const LocationCard = ({ location }: { location: Location }) => {
   return (
@@ -44,12 +32,7 @@ const LocationCard = ({ location }: { location: Location }) => {
           <span className="text-sm font-medium">
             <Trans>Status</Trans>
           </span>
-          <div className="flex items-center gap-2">
-            <span
-              className={`h-3 w-3 rounded-full ${getStatusColor(location.status)}`}
-            ></span>
-            <span className="text-sm">{location.status || "Unknown"}</span>
-          </div>
+          <LocationStatusComponent status={location.status} />
         </div>
         <div className="mb-2 flex items-center justify-between">
           <span className="text-sm font-medium">

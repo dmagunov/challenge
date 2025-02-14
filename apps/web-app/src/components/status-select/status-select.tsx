@@ -6,23 +6,32 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@design-system/shadcn";
-import { LocationStatus } from "~/types";
+import type { LocationStatus as LocationStatusType } from "api/locations";
+import { LocationStatus } from "~/components";
 
 interface StatusSelectProps {
-  status?: LocationStatus;
-  onChange: (status: LocationStatus) => void;
+  status?: LocationStatusType;
+  onChange: (status: LocationStatusType) => void;
 }
 
 function StatusSelect({ status, onChange }: StatusSelectProps) {
   return (
     <Select value={status} onValueChange={onChange}>
       <SelectTrigger>
-        <SelectValue placeholder="Select a status" />
+        <SelectValue placeholder="Select a status">
+          {status && <LocationStatus status={status} />}
+        </SelectValue>
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="Available">Available</SelectItem>
-        <SelectItem value="In use">In use</SelectItem>
-        <SelectItem value="Suspended">Suspended</SelectItem>
+        <SelectItem value="Available">
+          <LocationStatus status="Available" />
+        </SelectItem>
+        <SelectItem value="In use">
+          <LocationStatus status="In use" />
+        </SelectItem>
+        <SelectItem value="Suspended">
+          <LocationStatus status="Suspended" />
+        </SelectItem>
       </SelectContent>
     </Select>
   );

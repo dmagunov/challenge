@@ -1,4 +1,4 @@
-import { Trans } from "@lingui/react/macro";
+import { Trans, useLingui } from "@lingui/react/macro";
 import { createFileRoute } from "@tanstack/react-router";
 import React from "react";
 import { SearchInput, StatusSelect, LocationCard } from "~/components";
@@ -11,29 +11,51 @@ interface SearchResultsProps {
 }
 
 function SearchResults({ search, status }: SearchResultsProps) {
+  const { t } = useLingui();
   const { isPending, error, data } = useLocationsQuery({
     search,
     status: status === "All" ? undefined : status,
   });
 
   if (isPending) {
-    return <div>Loading...</div>;
+    return (
+      <div role="status" aria-live="polite">
+        <Trans>Loading...</Trans>
+      </div>
+    );
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div role="alert" aria-live="assertive">
+        <Trans>Error: {error.message}</Trans>
+      </div>
+    );
   }
+
+  const locationCount = data.locations.length;
 
   return (
     <div>
-      <h1 className="mb-6 text-2xl font-bold">
-        <Trans>Charging Points</Trans>
-      </h1>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {data.locations.map((location: Location) => (
-          <LocationCard key={location.locationId} location={location} />
-        ))}
+      <div className="mb-6 flex items-baseline justify-between">
+        <h1 className="text-2xl font-bold">
+          <Trans>Charging Points</Trans>
+        </h1>
+        <p className="text-sm text-muted-foreground">
+          <Trans>{locationCount} locations found</Trans>
+        </p>
       </div>
+      <ul
+        className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+        role="list"
+        aria-label={t`List of charging points`}
+      >
+        {data.locations.map((location: Location) => (
+          <li key={location.locationId}>
+            <LocationCard location={location} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

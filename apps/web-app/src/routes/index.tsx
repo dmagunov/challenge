@@ -1,8 +1,8 @@
 import { Trans } from "@lingui/react/macro";
 import { createFileRoute } from "@tanstack/react-router";
 import React from "react";
-import { SearchInput, StatusSelect } from "~/components";
-import { LocationStatus } from "~/types";
+import { SearchInput, StatusSelect, LocationCard } from "~/components";
+import { LocationStatus, Location } from "api/locations";
 import { useLocationsQuery, useDebounce } from "~/hooks";
 
 interface SearchResultsProps {
@@ -11,11 +11,7 @@ interface SearchResultsProps {
 }
 
 function SearchResults({ search, status }: SearchResultsProps) {
-  const {
-    isPending,
-    error,
-    data: locations,
-  } = useLocationsQuery({
+  const { isPending, error, data } = useLocationsQuery({
     search,
     status,
   });
@@ -28,7 +24,18 @@ function SearchResults({ search, status }: SearchResultsProps) {
     return <div>Error: {error.message}</div>;
   }
 
-  return <pre>{JSON.stringify(locations, null, 2)}</pre>;
+  return (
+    <>
+      <h1 className="mb-6 text-2xl font-bold">
+        <Trans>Charging Points</Trans>
+      </h1>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {data.locations.map((location: Location) => (
+          <LocationCard key={location.locationId} location={location} />
+        ))}
+      </div>
+    </>
+  );
 }
 
 const Route = createFileRoute("/")({
@@ -54,7 +61,6 @@ function RouteComponent() {
     <div className="flex min-h-screen flex-col gap-4 p-4">
       <SearchInput onSearch={handleSearch} />
       <StatusSelect onChange={handleStatusChange} />
-      <Trans>Welcome to My App</Trans>
       <SearchResults search={debouncedSearch} status={status} />
     </div>
   );

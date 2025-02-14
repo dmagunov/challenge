@@ -1,14 +1,17 @@
 # Monorepo starter template with design system
 
-> **Note**
-> This project is under active development. APIs, features, and documentation are subject to frequent changes and updates.
+I've decided to use my monorepo starter template for this project since it offers many reusable features. These include an API web server, linter configurations, formatters, and sharable components with a design system, type safe API client, and more.
 
-## Applications workspace
+<details>
+<summary><h2>Applications workspace</h2></summary>
 
 - [api](apps/api): Hono API
 - [web-app](apps/web-app): Vitejs + React + Tanstack Router app
 
-## Packages workspace
+</details>
+
+<details>
+<summary><h2>Packages workspace</h2></summary>
 
 ### Design system scope (@design-system)
 
@@ -25,6 +28,8 @@ Monorepo/workflow specific configurations:
 - [@configs/eslint](packages/@configs/eslint): `ESLint` configurations
 - [@configs/typescript](packages/@configs/typescript): `TypeScript` configurations
 - [@configs/prettier](packages/@configs/prettier): `Prettier` configurations
+
+</details>
 
 ## Requirements
 
@@ -48,8 +53,9 @@ pnpm dev
 By default, web app will be available at `http://localhost:5173`, API at `http://localhost:3001` (can be changed by renaming `.env.example` to `.env` for [api](apps/api/.env.example) and [web-app](apps/web-app/.env.example) and providing your own settings), and design system docs at `http://localhost:6006`,
 be sure to have all the ports available.
 
-## Build
+## Implementation notes and considerations
 
-```
-pnpm build
-```
+- List performance optimizations - pagination, infinite scroll, etc. On an API side rate limiting could be applied.
+- Offline capabilities - could be achieved by PWA plus persistent storage (indexedDB, [OPFS](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system), or alternatives that [Local-first software](https://localfirstweb.dev/) can provide for us). There are also persistent connectors for Tanstack Query.
+- Real-time capabilities - could be achieved by WebSocket
+- Ideally I should move filters to the query params and handle it using Router.

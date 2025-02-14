@@ -1,4 +1,4 @@
-# Monorepo starter template with design system
+# Challenge Monorepo
 
 I've decided to use my monorepo starter template for this project since it offers many reusable features. These include an API web server, linter configurations, formatters, and sharable components with a design system, type safe API client, and more.
 
@@ -50,10 +50,17 @@ pnpm i -r
 pnpm dev
 ```
 
-By default, web app will be available at `http://localhost:5173`, API at `http://localhost:3001` (can be changed by renaming `.env.example` to `.env` for [api](apps/api/.env.example) and [web-app](apps/web-app/.env.example) and providing your own settings), and design system docs at `http://localhost:6006`,
-be sure to have all the ports available.
+By default, web app will be available at `http://localhost:5173`
+
+API at `http://localhost:3001` (can be changed by renaming `.env.example` to `.env` for [api](apps/api/.env.example) and [web-app](apps/web-app/.env.example) and providing your own settings)
+
+Design system docs at `http://localhost:6006`,
+
+Be sure to have all the ports available.
 
 ## Implementation notes and considerations
+
+Of course I was not able to implement all the features and requirements, but I've tried to cover the most important ones.
 
 - List performance optimizations - pagination, infinite scroll, etc. On an API side rate limiting could be applied.
 - Offline capabilities - could be achieved by PWA plus persistent storage (indexedDB, [OPFS](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system), or alternatives that [Local-first software](https://localfirstweb.dev/) can provide for us). There are also persistent connectors for Tanstack Query.

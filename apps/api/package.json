@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./locations": "./src/routes/locations/schema.ts"
   },
   "scripts": {
     "dev": "bun run --watch src/index.ts",

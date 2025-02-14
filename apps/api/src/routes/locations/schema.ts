@@ -17,12 +17,14 @@ const coordinatesSchema = z.object({
   lon: z.number(),
 });
 
+const locationStatusSchema = z.enum(locationStatus);
+
 const locationSchema = z.object({
   locationId: z.union([z.number(), z.string()]),
   address: addressSchema,
   coordinates: coordinatesSchema,
   connectorType: z.enum(connectorType),
-  status: z.enum(locationStatus).optional(),
+  status: locationStatusSchema.optional(),
   maxPower: z.number(),
   public: z.boolean(),
   type: z.enum(locationType),
@@ -38,8 +40,10 @@ const locationsResponseSchema = z.object({
 });
 
 type LocationsRequest = z.infer<typeof locationsRequestSchema>;
-type Location = z.infer<typeof locationSchema>;
 type LocationsResponse = z.infer<typeof locationsResponseSchema>;
 
+type Location = z.infer<typeof locationSchema>;
+type LocationStatus = z.infer<typeof locationStatusSchema>;
+
 export { locationsRequestSchema, locationsResponseSchema, locationSchema };
-export type { LocationsRequest, Location, LocationsResponse };
+export type { LocationsRequest, Location, LocationsResponse, LocationStatus };

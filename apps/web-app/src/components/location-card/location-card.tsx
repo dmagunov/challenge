@@ -10,7 +10,7 @@ import {
 } from "@design-system/shadcn";
 import { Trans } from "@lingui/react/macro";
 
-import type { Location, LocationStatus } from "api/locations";
+import type { Location } from "api/locations";
 import { LocationStatus as LocationStatusComponent } from "../location-status";
 
 const LocationCard = ({ location }: { location: Location }) => {

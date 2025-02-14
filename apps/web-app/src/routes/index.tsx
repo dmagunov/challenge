@@ -7,13 +7,13 @@ import { useLocationsQuery, useDebounce } from "~/hooks";
 
 interface SearchResultsProps {
   search: string;
-  status?: LocationStatus;
+  status?: LocationStatus | "All";
 }
 
 function SearchResults({ search, status }: SearchResultsProps) {
   const { isPending, error, data } = useLocationsQuery({
     search,
-    status,
+    status: status === "All" ? undefined : status,
   });
 
   if (isPending) {
@@ -25,7 +25,7 @@ function SearchResults({ search, status }: SearchResultsProps) {
   }
 
   return (
-    <>
+    <div>
       <h1 className="mb-6 text-2xl font-bold">
         <Trans>Charging Points</Trans>
       </h1>
@@ -34,7 +34,7 @@ function SearchResults({ search, status }: SearchResultsProps) {
           <LocationCard key={location.locationId} location={location} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
@@ -58,9 +58,15 @@ function RouteComponent() {
   }, []);
 
   return (
-    <div className="flex min-h-screen flex-col gap-4 p-4">
-      <SearchInput onSearch={handleSearch} />
-      <StatusSelect onChange={handleStatusChange} />
+    <div className="flex min-h-screen flex-col gap-8 p-4">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+        <div className="w-full sm:flex-1">
+          <SearchInput onSearch={handleSearch} />
+        </div>
+        <div className="w-full sm:w-[200px]">
+          <StatusSelect onChange={handleStatusChange} />
+        </div>
+      </div>
       <SearchResults search={debouncedSearch} status={status} />
     </div>
   );

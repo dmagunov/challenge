@@ -13,6 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/routes/index.tsx:27
+#: src/routes/index.tsx:68
 msgid "Welcome to My App"
 msgstr ""

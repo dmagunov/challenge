@@ -1,7 +1,7 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import React, { Suspense } from "react";
 
-import { Menu, Footer, Logo, ThemeSwitcher } from "~/components";
+import { Menu, Footer, ThemeSwitcher } from "~/components";
 
 const TanStackRouterDevtools =
   process.env.NODE_ENV === "production"
@@ -20,7 +20,6 @@ function RootComponent(): React.ReactElement {
       <header className="sticky top-0 z-50 w-full bg-inherit py-6">
         <Container>
           <nav className="flex items-center justify-between space-x-6">
-            <Logo />
             <div className="flex items-center gap-6">
               <Menu />
               <ThemeSwitcher />

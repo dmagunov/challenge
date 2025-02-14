@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "bun run --watch src/index.ts",
+    "clean": "rm -rf node_modules",
     "start": "bun run src/index.ts",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
